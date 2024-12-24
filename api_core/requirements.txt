@@ -1,4 +1,5 @@
+asyncpg[all]
 sqlalchemy[asyncio]
-asyncpg
 fastapi
 uvicorn
+python-multipart

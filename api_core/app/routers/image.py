@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, File, UploadFile
-from sqlalchemy.orm import Session
-from .. import crud, schemas, database
+from sqlalchemy.ext.asyncio import AsyncSession
+from app import crud, schemas, database
 import shutil
 
 img_router = APIRouter()
@@ -9,7 +9,7 @@ img_router = APIRouter()
 def upload_image(
     image: schemas.ImageCreate,
     file: UploadFile = File(...),
-    db: Session = Depends(database.get_db),
+    db: AsyncSession = Depends(database.get_db),
 ):
     file_path = f"uploads/{file.filename}"
     with open(file_path, "wb") as f:
