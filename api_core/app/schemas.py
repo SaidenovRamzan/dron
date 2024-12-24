@@ -9,7 +9,6 @@ class DroneCreate(DroneBase):
     pass
 
 class Drone(DroneBase):
-    id: int
 
     class Config:
         orm_mode = True

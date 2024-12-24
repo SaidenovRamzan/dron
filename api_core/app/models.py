@@ -7,6 +7,7 @@ class Drone(Base):
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String, index=True)
     status = Column(String, default="active")
+    images = relationship("ImageData", back_populates="drone")
 
 class ImageData(Base):
     __tablename__ = "images"

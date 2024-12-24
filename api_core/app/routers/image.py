@@ -3,9 +3,9 @@ from sqlalchemy.orm import Session
 from .. import crud, schemas, database
 import shutil
 
-router = APIRouter()
+img_router = APIRouter()
 
-@router.post("/images/")
+@img_router.post("/images/")
 def upload_image(
     image: schemas.ImageCreate,
     file: UploadFile = File(...),
