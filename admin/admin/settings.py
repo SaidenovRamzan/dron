@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'dron',
         'USER': 'user',
         'PASSWORD': 'password',
-        'HOST': 'localhost',
+        'HOST': 'postgres_dron',
         'PORT': '5432',
     }
 }

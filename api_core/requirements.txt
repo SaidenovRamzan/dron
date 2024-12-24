@@ -1,4 +1,4 @@
-sqlalchemy
-psycopg2-binary==2.9.10
-asyncpg==0.30.0
-fastapi==0.115.6
+sqlalchemy[asyncio]
+asyncpg
+fastapi
+uvicorn
