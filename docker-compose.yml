@@ -9,7 +9,7 @@ services:
       python manage.py runserver 0.0.0.0:8001"
     container_name: dj_admin
     ports:
-      - "8001:8001"
+      - "8101:8001"
     environment:
       - DATABASE_URL=postgresql://user:password@db/dron
     depends_on:
@@ -20,7 +20,7 @@ services:
       context: ./api_core
     container_name: api
     ports:
-      - "8000:8000"
+      - "8100:8000"
     environment:
       - DATABASE_URL=postgresql://user:password@db/dron
     depends_on:
@@ -34,7 +34,7 @@ services:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: dron
     ports:
-      - "5432:5432"
+      - "6432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 

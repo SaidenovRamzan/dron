@@ -3,3 +3,5 @@ sqlalchemy[asyncio]
 fastapi
 uvicorn
 python-multipart
+tensorflow
+pillow==11.0.0
